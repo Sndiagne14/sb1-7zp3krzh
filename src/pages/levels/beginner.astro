@@ -1,0 +1,92 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Beginner Level - ENGLISHLOVERS">
+	<main>
+		<h1>Beginner Level</h1>
+		<div class="content">
+			<section class="course-overview">
+				<h2>Course Overview</h2>
+				<ul>
+					<li>Basic Grammar Foundations</li>
+					<li>Essential Vocabulary</li>
+					<li>Simple Conversations</li>
+					<li>Numbers and Basic Math</li>
+					<li>Days, Months, and Time</li>
+				</ul>
+			</section>
+
+			<section class="learning-path">
+				<h2>Learning Path</h2>
+				<div class="modules">
+					<div class="module">
+						<h3>Module 1: Getting Started</h3>
+						<p>Learn basic greetings and introductions</p>
+					</div>
+					<div class="module">
+						<h3>Module 2: Daily Life</h3>
+						<p>Vocabulary for everyday situations</p>
+					</div>
+					<div class="module">
+						<h3>Module 3: Basic Grammar</h3>
+						<p>Present simple and continuous tenses</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 2rem;
+	}
+	h1 {
+		color: var(--primary-color);
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	.content {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		gap: 2rem;
+	}
+	.course-overview {
+		background: white;
+		padding: 2rem;
+		border-radius: 8px;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	}
+	.course-overview ul {
+		margin-top: 1rem;
+		padding-left: 1.5rem;
+	}
+	.course-overview li {
+		margin-bottom: 0.5rem;
+	}
+	.modules {
+		display: grid;
+		gap: 1rem;
+	}
+	.module {
+		background: white;
+		padding: 1.5rem;
+		border-radius: 8px;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	}
+	h2 {
+		color: var(--primary-color);
+		margin-bottom: 1rem;
+	}
+	h3 {
+		margin-bottom: 0.5rem;
+	}
+	@media (max-width: 768px) {
+		.content {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

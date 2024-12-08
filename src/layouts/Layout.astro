@@ -1,0 +1,91 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Learn English with ENGLISHLOVERS - Beginner to Advanced levels" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<nav class="main-nav">
+			<div class="nav-content">
+				<a href="/" class="logo">ENGLISHLOVERS</a>
+				<div class="nav-links">
+					<a href="/levels/beginner">Beginner</a>
+					<a href="/levels/intermediate">Intermediate</a>
+					<a href="/levels/advanced">Advanced</a>
+					<a href="/about" class="about-link">About Us</a>
+				</div>
+			</div>
+		</nav>
+		<slot />
+		<footer>
+			<p>&copy; 2024 ENGLISHLOVERS. All rights reserved.</p>
+		</footer>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--primary-color: #2563eb;
+		--secondary-color: #1e40af;
+		--background-light: #f8fafc;
+		--text-dark: #1e293b;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: var(--background-light);
+		color: var(--text-dark);
+	}
+	.main-nav {
+		background: white;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+		padding: 1rem 0;
+	}
+	.nav-content {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.logo {
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: var(--primary-color);
+		text-decoration: none;
+	}
+	.nav-links {
+		display: flex;
+		gap: 2rem;
+	}
+	.nav-links a {
+		text-decoration: none;
+		color: var(--text-dark);
+		font-weight: 500;
+	}
+	.nav-links a:hover {
+		color: var(--primary-color);
+	}
+	footer {
+		text-align: center;
+		padding: 2rem;
+		background: white;
+		margin-top: 4rem;
+	}
+</style>
